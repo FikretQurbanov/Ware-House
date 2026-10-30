@@ -7,7 +7,7 @@ export default function DemoNoticeBanner() {
 
   return (
     <div className="bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-800 text-white text-xs sm:text-sm py-2 px-4 shadow-inner no-print">
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 sm:gap-3">
         <div className="flex items-center gap-2">
           <span className="bg-amber-400 text-slate-900 font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wider">
             Demo Prototip
@@ -17,15 +17,15 @@ export default function DemoNoticeBanner() {
           </span>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-          <div className="flex items-center gap-1.5 bg-blue-900/60 backdrop-blur px-2.5 py-1 rounded-full border border-blue-400/30">
-            <UserCheck className="w-3.5 h-3.5 text-blue-300" />
-            <span className="text-blue-200">Aktiv rol:</span>
+        <div className="flex items-center gap-2 sm:gap-3 flex-wrap max-w-full">
+          <div className="flex items-center gap-1.5 bg-blue-900/60 backdrop-blur px-2.5 py-1 rounded-full border border-blue-400/30 max-w-full min-w-0">
+            <UserCheck className="w-3.5 h-3.5 text-blue-300 flex-shrink-0" />
+            <span className="text-blue-200 flex-shrink-0">Aktiv rol:</span>
             <select
               aria-label="Aktiv demo rol seçimi"
               value={currentUser?.id || ""}
               onChange={(e) => switchUser(e.target.value)}
-              className="bg-transparent text-white font-medium focus:outline-none cursor-pointer text-xs"
+              className="bg-transparent text-white font-medium focus:outline-none cursor-pointer text-xs max-w-[130px] xs:max-w-[170px] sm:max-w-none truncate"
             >
               {users.map(u => (
                 <option key={u.id} value={u.id} className="text-slate-900">

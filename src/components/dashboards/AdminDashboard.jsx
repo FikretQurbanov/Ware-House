@@ -74,10 +74,10 @@ export default function AdminDashboard() {
       </div>
 
       {/* Tabs */}
-      <div className="flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-2">
+      <div className="flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-2 overflow-x-auto max-w-full">
         <button
           onClick={() => setActiveTab('bookings')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`flex-shrink-0 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activeTab === 'bookings'
               ? 'bg-blue-600 text-white'
               : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -87,7 +87,7 @@ export default function AdminDashboard() {
         </button>
         <button
           onClick={() => setActiveTab('listings')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`flex-shrink-0 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activeTab === 'listings'
               ? 'bg-blue-600 text-white'
               : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -97,7 +97,7 @@ export default function AdminDashboard() {
         </button>
         <button
           onClick={() => setActiveTab('users')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`flex-shrink-0 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activeTab === 'users'
               ? 'bg-blue-600 text-white'
               : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'

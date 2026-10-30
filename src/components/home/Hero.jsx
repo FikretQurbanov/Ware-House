@@ -18,9 +18,9 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-6">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs font-semibold tracking-wide border border-blue-200 dark:border-blue-800">
-            <ShieldCheck className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <span>Azərbaycanın Etibarlı Saxlanc Şəbəkəsi</span>
+          <div className="inline-flex max-w-full items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs font-semibold tracking-wide border border-blue-200 dark:border-blue-800">
+            <ShieldCheck className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+            <span className="truncate sm:overflow-visible">Azərbaycanın Etibarlı Saxlanc Şəbəkəsi</span>
           </div>
 
           {/* Heading */}

@@ -107,22 +107,22 @@ export default function FeatureHighlights() {
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
               Rezervasiya təsdiqlənən anda sistem tərəfindən elektron müqavilə formalaşdırılır. Obyektin dəqiq ünvanı, qiymət cədvəli, temperatur öhdəlikləri, ləğvetmə və zərər ödənişi qaydaları hər iki tərəf üçün əlçatan olur.
             </p>
-            <div className="p-4 bg-blue-50 dark:bg-blue-950/40 rounded-xl border border-blue-200 dark:border-blue-900/50 flex items-center justify-between">
+            <div className="p-4 bg-blue-50 dark:bg-blue-950/40 rounded-xl border border-blue-200 dark:border-blue-900/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <div className="text-xs font-bold text-blue-900 dark:text-blue-200">Nümunə Rəqəmsal Müqaviləni İncələyin</div>
                 <div className="text-[11px] text-blue-700 dark:text-blue-300">Standart 8 maddəlik saxlanc və daşınma razılaşması</div>
               </div>
               <button
                 onClick={() => navigateTo('contract', { bookingId: 'booking-01' })}
-                className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition-colors"
+                className="self-start sm:self-auto flex-shrink-0 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition-colors"
               >
                 Müqaviləyə Bax
               </button>
             </div>
           </div>
 
-          <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg font-mono text-xs text-slate-600 dark:text-slate-300 space-y-3">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 font-bold">
+          <div className="bg-slate-50 dark:bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg font-mono text-xs text-slate-600 dark:text-slate-300 space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 font-bold">
               <span>SƏNƏD: DTC-2026-8891</span>
               <span className="text-emerald-600 dark:text-emerald-400 text-[10px] bg-emerald-100 dark:bg-emerald-950 px-2 py-0.5 rounded">
                 ELEKTRON İMZALANIB

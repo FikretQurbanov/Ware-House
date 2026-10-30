@@ -55,7 +55,7 @@ export default function DigitalContractPage() {
       {/* Contract Document Card */}
       <div 
         id="printable-receipt"
-        className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl p-8 sm:p-12 space-y-8 font-serif transition-colors text-slate-800 dark:text-slate-200"
+        className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl p-4 sm:p-8 md:p-12 space-y-8 font-serif transition-colors text-slate-800 dark:text-slate-200"
       >
         {/* Header */}
         <div className="text-center pb-6 border-b border-slate-200 dark:border-slate-800 space-y-2">
@@ -180,13 +180,13 @@ export default function DigitalContractPage() {
         </div>
 
         {/* Electronic Signatures Footer */}
-        <div className="pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-8 font-sans text-xs">
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 font-sans text-xs">
           <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 space-y-2">
             <span className="text-slate-400 block uppercase font-bold text-[10px]">İcarədar Tərəfindən:</span>
             <div className="font-bold text-slate-800 dark:text-slate-200">{booking.providerName}</div>
-            <div className="text-emerald-600 font-mono text-[11px] flex items-center gap-1">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              Elektron Təsdiq Edilib (DepoTap ID: PRV-9921)
+            <div className="text-emerald-600 font-mono text-[11px] flex flex-wrap items-center gap-1">
+              <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
+              <span>Elektron Təsdiq Edilib (DepoTap ID: PRV-9921)</span>
             </div>
             <div className="text-[10px] text-slate-400">İmza Tarixi: {booking.contractSignedAt}</div>
           </div>
@@ -194,9 +194,9 @@ export default function DigitalContractPage() {
           <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 space-y-2">
             <span className="text-slate-400 block uppercase font-bold text-[10px]">İcarəçi Tərəfindən:</span>
             <div className="font-bold text-slate-800 dark:text-slate-200">{booking.customerName}</div>
-            <div className="text-emerald-600 font-mono text-[11px] flex items-center gap-1">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              Elektron İmzalanıb (Demo Təsdiq)
+            <div className="text-emerald-600 font-mono text-[11px] flex flex-wrap items-center gap-1">
+              <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
+              <span>Elektron İmzalanıb (Demo Təsdiq)</span>
             </div>
             <div className="text-[10px] text-slate-400">İmza Tarixi: {booking.contractSignedAt}</div>
           </div>

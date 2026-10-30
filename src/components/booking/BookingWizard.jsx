@@ -172,7 +172,7 @@ export default function BookingWizard() {
       </div>
 
       {/* Step Content Container */}
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md p-6 sm:p-8 space-y-6">
+      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md p-4 sm:p-8 space-y-6">
 
         {/* STEP 1: Item Details Review */}
         {currentStep === 1 && (
@@ -417,7 +417,7 @@ export default function BookingWizard() {
               Bütün xərclər tam açıq göstərilir. Heç bir gizli komissiya yoxdur:
             </p>
 
-            <div className="bg-slate-50 dark:bg-slate-900/60 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+            <div className="bg-slate-50 dark:bg-slate-900/60 p-4 sm:p-5 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
               <div className="flex justify-between text-xs">
                 <span className="text-slate-600 dark:text-slate-300">
                   Saxlanc Haqqı ({pricing.dailyRate.toFixed(2)} ₼ × {durationDays} gün):
@@ -446,7 +446,7 @@ export default function BookingWizard() {
               </div>
 
               {/* Insurance option toggle */}
-              <div className="flex items-center justify-between text-xs pt-2 border-t border-slate-200 dark:border-slate-700">
+              <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-1.5 text-xs pt-2 border-t border-slate-200 dark:border-slate-700">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
                     type="checkbox"
@@ -456,7 +456,7 @@ export default function BookingWizard() {
                   />
                   <span>Əşyaların Zəmanətli Sığortası (Demo qorunma):</span>
                 </label>
-                <span className="font-mono font-bold text-slate-900 dark:text-white">
+                <span className="font-mono font-bold text-slate-900 dark:text-white self-end xs:self-auto">
                   {pricing.insuranceFee.toFixed(2)} ₼
                 </span>
               </div>

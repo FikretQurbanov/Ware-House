@@ -19,7 +19,7 @@ export default function Toast() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 animate-bounce-in max-w-sm w-full p-4 rounded-xl shadow-2xl border backdrop-blur flex items-start gap-3 transition-all duration-300 pointer-events-auto">
+    <div className="fixed bottom-5 right-4 left-4 sm:left-auto sm:right-5 sm:max-w-sm z-50 animate-bounce-in p-4 rounded-xl shadow-2xl border backdrop-blur flex items-start gap-3 transition-all duration-300 pointer-events-auto">
       <div className={`flex items-start gap-3 p-3 rounded-xl border w-full ${borderColors[toast.type] || borderColors.info}`}>
         {icons[toast.type] || icons.info}
         <div className="flex-1 text-sm font-medium">

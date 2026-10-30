@@ -94,7 +94,7 @@ export default function BookingTrackingPage() {
             <ArrowLeft className="w-4 h-4" />
             Panelə qayıt
           </button>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
               Rezervasiya İzləməsi #{booking.bookingCode}
             </h1>
@@ -107,7 +107,7 @@ export default function BookingTrackingPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <button
             onClick={() => navigateTo('receipt', { bookingId: booking.id })}
             className="px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 text-xs font-bold text-slate-700 dark:text-slate-300 transition-colors"
@@ -129,7 +129,7 @@ export default function BookingTrackingPage() {
         <div className="lg:col-span-2 space-y-8">
           
           {/* Visual 10-Stage Status Timeline */}
-          <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 md:p-8 shadow-sm space-y-6">
             <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-700">
               <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <Clock className="w-5 h-5 text-blue-500" />
@@ -169,7 +169,7 @@ export default function BookingTrackingPage() {
                     </div>
 
                     <div className="pl-4">
-                      <div className="flex items-center justify-between">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-2">
                         <h4 className={`text-sm font-bold ${
                           isCurrent
                             ? 'text-blue-600 dark:text-blue-400'
@@ -194,7 +194,7 @@ export default function BookingTrackingPage() {
           </div>
 
           {/* Item Handover & Inspection Documentation Workflow */}
-          <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 md:p-8 shadow-sm space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100 dark:border-slate-700">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-emerald-500" />

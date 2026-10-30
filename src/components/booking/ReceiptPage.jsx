@@ -69,13 +69,13 @@ export default function ReceiptPage() {
       {/* Printable Receipt Container */}
       <div 
         id="printable-receipt" 
-        className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden p-6 sm:p-10 space-y-8 transition-colors"
+        className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden p-4 sm:p-6 md:p-10 space-y-8 transition-colors"
       >
         {/* Receipt Header */}
         <div className="flex flex-col sm:flex-row sm:items-start justify-between pb-6 border-b border-slate-200 dark:border-slate-800 gap-6">
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl bg-blue-600 text-white font-extrabold flex items-center justify-center text-lg shadow-md">
+              <div className="w-10 h-10 rounded-xl bg-blue-600 text-white font-extrabold flex items-center justify-center text-lg shadow-md flex-shrink-0">
                 DT
               </div>
               <div>
@@ -89,12 +89,12 @@ export default function ReceiptPage() {
           </div>
 
           {/* QR Code and Code Box */}
-          <div className="flex items-center gap-4 bg-slate-50 dark:bg-slate-800/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+          <div className="flex flex-col xs:flex-row items-center gap-4 bg-slate-50 dark:bg-slate-800/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 max-w-full">
             <div 
-              className="bg-white p-2 rounded-xl shadow-inner flex items-center justify-center"
+              className="bg-white p-2 rounded-xl shadow-inner flex items-center justify-center w-36 h-36 flex-shrink-0 [&>svg]:w-full [&>svg]:h-full"
               dangerouslySetInnerHTML={{ __html: qr.svgString }}
             />
-            <div className="space-y-1">
+            <div className="space-y-1 text-center xs:text-left">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                 Rezervasiya Kodu
               </span>
@@ -169,8 +169,8 @@ export default function ReceiptPage() {
             Maliyyə Hesabatı və Xərclər
           </h4>
 
-          <div className="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden text-xs">
-            <table className="w-full text-left">
+          <div className="rounded-xl border border-slate-200 dark:border-slate-800 overflow-x-auto text-xs">
+            <table className="w-full min-w-[340px] text-left">
               <thead className="bg-slate-50 dark:bg-slate-800/80 text-slate-500 border-b border-slate-200 dark:border-slate-800">
                 <tr>
                   <th className="p-3 font-semibold">Xidmətin Təsviri</th>
@@ -241,7 +241,7 @@ export default function ReceiptPage() {
       </div>
 
       {/* Post-receipt Navigation CTA (hidden when printing) */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/50 no-print">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/50 no-print">
         <div>
           <h4 className="text-sm font-bold text-blue-900 dark:text-blue-200">
             Əşyalarınızın Statusunu İzləmək İstəyirsiniz?
@@ -251,16 +251,16 @@ export default function ReceiptPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto flex-shrink-0">
           <button
             onClick={() => navigateTo('contract', { bookingId: booking.id })}
-            className="px-4 py-2 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 transition-colors"
+            className="w-full sm:w-auto px-4 py-2 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 transition-colors text-center"
           >
             Rəqəmsal Müqaviləyə Bax
           </button>
           <button
             onClick={() => navigateTo('booking-tracking', { bookingId: booking.id })}
-            className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow-md transition-colors flex items-center gap-1.5"
+            className="w-full sm:w-auto px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow-md transition-colors flex items-center justify-center gap-1.5"
           >
             <span>Statusu İzlə</span>
             <ArrowRight className="w-4 h-4" />

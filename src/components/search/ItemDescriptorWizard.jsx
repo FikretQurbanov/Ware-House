@@ -78,7 +78,7 @@ export default function ItemDescriptorWizard({ onSearch }) {
   ];
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md p-6 space-y-6">
+    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md p-4 sm:p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100 dark:border-slate-700">
         <div>
           <div className="flex items-center gap-2">
@@ -147,7 +147,7 @@ export default function ItemDescriptorWizard({ onSearch }) {
 
       {/* Dimensions & Weight Grid */}
       <div className="bg-slate-50 dark:bg-slate-900/60 p-4 rounded-xl border border-slate-200 dark:border-slate-800 space-y-3">
-        <div className="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between">
+        <div className="text-xs font-bold text-slate-700 dark:text-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
           <span className="flex items-center gap-1.5">
             <Maximize2 className="w-4 h-4 text-blue-500" />
             Ölçülər və Çəki Hesablaması

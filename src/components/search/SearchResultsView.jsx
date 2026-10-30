@@ -57,10 +57,10 @@ export default function SearchResultsView() {
           </div>
 
           {/* Tab buttons */}
-          <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl text-xs font-bold">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-1.5 sm:gap-2 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl text-xs font-bold w-full sm:w-auto">
             <button
               onClick={() => setActiveTab('eligible')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
+              className={`px-3 py-2 sm:py-1.5 rounded-lg text-center transition-all ${
                 activeTab === 'eligible'
                   ? 'bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 shadow-sm'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
@@ -70,7 +70,7 @@ export default function SearchResultsView() {
             </button>
             <button
               onClick={() => setActiveTab('all')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
+              className={`px-3 py-2 sm:py-1.5 rounded-lg text-center transition-all ${
                 activeTab === 'all'
                   ? 'bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 shadow-sm'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
